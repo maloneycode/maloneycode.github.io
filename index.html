@@ -1,75 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Your Website</title>
-    <link rel="stylesheet" href="styles.css">
-
-   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WSJR2V8J');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Initialize dataLayer and trigger "pageview" event -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            event: "pageview",
-            page: "Home"
-        });
-    </script>
-</head>
+<html>
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJR2V8J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <header>
-        <h1>Your Website</h1>
-        <nav>
-            <a href="index.html" id="home-tab">Home</a>
-            <a href="about.html" id="about-tab">About</a>
-            <a href="contact.html" id="contact-tab">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Welcome to the Home Page</h2>
-        <p>This is the main content area for the Home page. You can add text, images, or any elements here to suit your content needs.</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
-
-    <!-- JavaScript to capture all clicks and push to dataLayer -->
-    <script>
-        // Capture every click on the document
-        document.addEventListener("click", function(event) {
-            // Get details of the clicked element
-            const element = event.target;
-            const elementDetails = {
-                tag: element.tagName.toLowerCase(),
-                id: element.id || null,
-                class: element.className || null,
-                text: element.innerText || null
-            };
-
-            // Push the click event to dataLayer with element details
-            window.dataLayer.push({
-                event: "click_event",
-                element: elementDetails
-            });
-
-            console.log("dataLayer click_event pushed:", elementDetails);
-        });
-    </script>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
 
 </body>
 </html>
