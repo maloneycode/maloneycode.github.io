@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WSJR2V8J');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Your Website</title>
@@ -20,10 +12,6 @@
     </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJR2V8J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <header>
         <h1>Your Website</h1>
@@ -47,24 +35,25 @@
     <script>
         // Function to handle the dataLayer push for navigation clicks
         function handleNavClick(tabName) {
+            // Push event to dataLayer
             window.dataLayer.push({
-                event: "nav_bar_click",
+                event: "nav_bar",       // Event name is "nav_bar" when "Home" tab is clicked
                 tab_selected: tabName
             });
-            console.log(`dataLayer event pushed: { event: "nav_bar_click", tab_selected: "${tabName}" }`);
+            console.log(`dataLayer event pushed: { event: "nav_bar", tab_selected: "${tabName}" }`);
         }
 
         // Add event listeners for each navigation link
         document.getElementById("home-tab").addEventListener("click", function() {
-            handleNavClick("Home");
+            handleNavClick("Home");  // Pushes "nav_bar" event when Home is clicked
         });
 
         document.getElementById("about-tab").addEventListener("click", function() {
-            handleNavClick("About");
+            handleNavClick("About"); // Pushes "nav_bar" event when About is clicked
         });
 
         document.getElementById("contact-tab").addEventListener("click", function() {
-            handleNavClick("Contact");
+            handleNavClick("Contact"); // Pushes "nav_bar" event when Contact is clicked
         });
     </script>
 
