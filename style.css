@@ -27,7 +27,8 @@
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0;
+    padding: 1em 0;
+    background-color: #555;
   }
   
   nav ul li {
@@ -38,10 +39,11 @@
     color: #fff;
     text-decoration: none;
     padding: 0.5em 1em;
+    transition: background-color 0.3s;
   }
   
   nav ul li a:hover {
-    background-color: #555;
+    background-color: #777;
     border-radius: 5px;
   }
   
@@ -54,6 +56,10 @@
     border-radius: 8px;
   }
   
+  section {
+    margin-bottom: 2em;
+  }
+  
   footer {
     background-color: #333;
     color: #fff;
@@ -62,21 +68,7 @@
     margin-top: 2em;
   }
   
-  /* Additional styling for buttons, links, etc. */
-  button, input, textarea {
-    font-size: 1em;
-    padding: 0.5em;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #555;
+  footer p {
+    margin: 0;
   }
   
