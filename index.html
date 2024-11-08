@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog - Homepage</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-
-  <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -15,47 +9,74 @@
     })(window,document,'script','dataLayer','GTM-WSJR2V8J');</script>
     <!-- End Google Tag Manager -->
 
-</head>
-<body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJR2V8J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Initialize dataLayer if not already initialized
+    window.dataLayer = window.dataLayer || [];
 
-<header>
-  <h1>Welcome to My Blog</h1>
-  <p>Sharing my thoughts and innovations with the world</p>
+    // Push pageview event with URL when the page loads
+    window.dataLayer.push({
+      event: 'pageview',
+      page: {
+        url: window.location.href
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJR2V8J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <h1>Welcome to My Blog</h1>
+    <p>Your go-to source for insights and ideas</p>
+  </header>
+
   <nav>
     <ul>
-      <li><a href="index.html" data-tab="Home">Home</a></li>
-      <li><a href="about.html" data-tab="About Me">About Me</a></li>
-      <li><a href="innovation.html" data-tab="Innovation">Innovation</a></li>
-      <li><a href="contact.html" data-tab="Contact">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#blog">Blog Post</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<div class="container">
-  <h2>Latest Posts</h2>
-  <p>Here is where your blog posts would go. You could start with a short introduction to your latest post:</p>
-  <p><em>"Exploring the latest trends in technology..."</em></p>
-</div>
+  <div class="container">
+    <section id="home">
+      <h2>Featured Post</h2>
+      <p>This is your space to share your latest thoughts, insights, and stories. Whether you’re writing about technology, lifestyle, or personal experiences, this is where your readers will come for your latest update.</p>
+      <p>Feel free to edit this text to fit your style and tone.</p>
+    </section>
 
-<footer>
-  <p>&copy; 2023 My Blog. All rights reserved.</p>
-</footer>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Welcome to the 'About Me' section! Share a little bit about yourself here. Describe your background, interests, and what motivates you to blog. This section is a great place to connect with readers on a personal level.</p>
+    </section>
 
-<script>
-  // Event listener for nav bar clicks
-  document.querySelectorAll('nav ul li a').forEach(function(navLink) {
-    navLink.addEventListener('click', function(e) {
-      window.dataLayer.push({
-        'event': 'nav_bar',
-        'tab_name': e.target.getAttribute('data-tab')
-      });
-    });
-  });
-</script>
+    <section id="blog">
+      <h2>Latest Blog Post</h2>
+      <h3>Exploring the Future of Technology</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+      <p>Pellentesque sit amet felis nec nisi gravida gravida quis vitae quam. Nulla et odio eu ligula facilisis sollicitudin. Etiam euismod aliquet nisl, at scelerisque sapien auctor nec. Vivamus fermentum, felis ut venenatis tristique, erat felis elementum urna, eu egestas risus odio non eros.</p>
+      <p>Edit this content with your own blog text, and share something valuable or interesting with your audience!</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Have questions or want to get in touch? Feel free to reach out!</p>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 My Blog. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
