@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Your Website</title>
+    <link rel="stylesheet" href="styles.css">
 
-    <!-- Google Tag Manager -->
+   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -10,11 +14,6 @@
     })(window,document,'script','dataLayer','GTM-WSJR2V8J');</script>
     <!-- End Google Tag Manager -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Your Website</title>
-    <link rel="stylesheet" href="styles.css">
-    
     <!-- Initialize dataLayer and trigger "pageview" event -->
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -49,28 +48,26 @@
         <p>&copy; 2024 Your Website</p>
     </footer>
 
-    <!-- JavaScript for dataLayer pushes on navigation clicks -->
+    <!-- JavaScript to capture all clicks and push to dataLayer -->
     <script>
-        // Function to handle the dataLayer push for navigation clicks
-        function handleNavClick(tabName) {
+        // Capture every click on the document
+        document.addEventListener("click", function(event) {
+            // Get details of the clicked element
+            const element = event.target;
+            const elementDetails = {
+                tag: element.tagName.toLowerCase(),
+                id: element.id || null,
+                class: element.className || null,
+                text: element.innerText || null
+            };
+
+            // Push the click event to dataLayer with element details
             window.dataLayer.push({
-                event: "nav_bar",
-                tab_selected: tabName
+                event: "click_event",
+                element: elementDetails
             });
-            console.log(`dataLayer event pushed: { event: "nav_bar", tab_selected: "${tabName}" }`);
-        }
 
-        // Add event listeners for each navigation link
-        document.getElementById("home-tab").addEventListener("click", function() {
-            handleNavClick("Home");
-        });
-
-        document.getElementById("about-tab").addEventListener("click", function() {
-            handleNavClick("About");
-        });
-
-        document.getElementById("contact-tab").addEventListener("click", function() {
-            handleNavClick("Contact");
+            console.log("dataLayer click_event pushed:", elementDetails);
         });
     </script>
 
