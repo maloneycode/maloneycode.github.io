@@ -1,41 +1,75 @@
-/* Basic reset */
-* {
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Centering and styling the main container */
-  body {
+    background: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #0078D7;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f4f8;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Container for the 3x3 grid */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 15px;
-  }
-  
-  /* Styling for each button */
-  .grid-button {
-    background-color: #007acc;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
     color: white;
-    border: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    width: 80%;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    background: #0078D7;
+    color: white;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Hover effect for buttons */
-  .grid-button:hover {
-    background-color: #005a99;
-  }
-  
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background: #ddd;
+    color: #333;
+}
